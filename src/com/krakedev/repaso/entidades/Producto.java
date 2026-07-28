@@ -9,9 +9,9 @@ public class Producto {
         this.precio = precio;
     }
 
-    public void setPrecio(double precio) { 
-        if(precio < 0) { precio = precio * -1; }
-        else { this.precio = precio; }
+    public void setPrecio(double precio) {
+        if(precio < 0) { this.precio = precio * -1; }
+        else if(precio > 0) { this.precio = precio; }
     }
 
     public double calcularPrecioPromo(double porcentajeDescuento) {
