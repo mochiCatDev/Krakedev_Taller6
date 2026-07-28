@@ -13,4 +13,11 @@ public class Producto {
         if(precio < 0) { precio = precio * -1; }
         else { this.precio = precio; }
     }
+
+    public double calcularPrecioPromo(double porcentajeDescuento) {
+        if(porcentajeDescuento >= 0 && porcentajeDescuento <= 100) {
+            precio = precio * (100 - porcentajeDescuento) / 100;
+        }
+        return precio;
+    }
 }
