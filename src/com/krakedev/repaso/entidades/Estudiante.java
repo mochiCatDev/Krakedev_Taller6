@@ -5,6 +5,9 @@ public class Estudiante {
     private double nota;
     private String resultado;
 
+    // getters
+    public String getResultado() { return resultado; }
+
     public Estudiante(String nombre) {
         this.nombre = nombre;
     }
