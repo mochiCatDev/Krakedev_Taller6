@@ -8,4 +8,9 @@ public class Producto {
         this.nombre = nombre;
         this.precio = precio;
     }
+
+    public void setPrecio(double precio) { 
+        if(precio < 0) { precio = precio * -1; }
+        else { this.precio = precio; }
+    }
 }
