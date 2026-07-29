@@ -6,6 +6,19 @@ public class Item {
     private int productosDevueltos;
     private int productosVendidos;
 
+    // constructor
+    public Item(String nombre) { this.nombre = nombre; }
+    public Item(String nombre, int productosActuales) { 
+        this.nombre = nombre;
+        this.productosActuales = productosActuales; 
+    }
+    public Item(String nombre, int productosActuales, int productosDevueltos, int productosVendidos) { 
+        this.nombre = nombre;
+        this.productosActuales = productosActuales;
+        this.productosDevueltos = productosDevueltos;
+        this.productosVendidos = productosVendidos;
+    }
+
     // getters
     public String getNombre() { return nombre; }
     public int getProductosActuales() { return productosActuales; }
@@ -21,10 +34,10 @@ public class Item {
     // métodos
     public void imprimir() {
         System.out.println("+-------------------------------------+");
-        System.out.println("| Nombre: %-29s".formatted(nombre));
-        System.out.println("| Productos Actuales: %-17d".formatted(productosActuales));
-        System.out.println("| Productos Devueltos: %-16d".formatted(productosDevueltos));
-        System.out.println("| Productos Vendidos: %-17d".formatted(productosVendidos));
+        System.out.println("| Nombre: %-27s |".formatted(nombre));
+        System.out.println("| Productos Actuales: %-15d |".formatted(productosActuales));
+        System.out.println("| Productos Devueltos: %-14d |".formatted(productosDevueltos));
+        System.out.println("| Productos Vendidos: %-15d |".formatted(productosVendidos));
         System.out.println("+-------------------------------------+");
     }
 
