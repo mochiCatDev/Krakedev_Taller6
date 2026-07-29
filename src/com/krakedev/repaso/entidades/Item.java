@@ -17,4 +17,14 @@ public class Item {
     public void setProductosActuales(int productosActuales) { this.productosActuales = productosActuales; }
     public void setProductosDevueltos(int productosDevueltos) { this.productosDevueltos = productosDevueltos; }
     public void setProductosVendidos(int productosVendidos) { this.productosVendidos = productosVendidos; }
+
+    // métodos
+    public void imprimir() {
+      System.out.println("+-------------------------------------+");
+      System.out.println("| Nombre: %-29s".formatted(nombre));
+      System.out.println("| Productos Actuales: %-17d".formatted(productosActuales));
+      System.out.println("| Productos Devueltos: %-16d".formatted(productosDevueltos));
+      System.out.println("| Productos Vendidos: %-17d".formatted(productosVendidos));
+      System.out.println("+-------------------------------------+");
+    }
 }
