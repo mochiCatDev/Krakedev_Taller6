@@ -20,11 +20,16 @@ public class Item {
 
     // métodos
     public void imprimir() {
-      System.out.println("+-------------------------------------+");
-      System.out.println("| Nombre: %-29s".formatted(nombre));
-      System.out.println("| Productos Actuales: %-17d".formatted(productosActuales));
-      System.out.println("| Productos Devueltos: %-16d".formatted(productosDevueltos));
-      System.out.println("| Productos Vendidos: %-17d".formatted(productosVendidos));
-      System.out.println("+-------------------------------------+");
+        System.out.println("+-------------------------------------+");
+        System.out.println("| Nombre: %-29s".formatted(nombre));
+        System.out.println("| Productos Actuales: %-17d".formatted(productosActuales));
+        System.out.println("| Productos Devueltos: %-16d".formatted(productosDevueltos));
+        System.out.println("| Productos Vendidos: %-17d".formatted(productosVendidos));
+        System.out.println("+-------------------------------------+");
+    }
+
+    public void vender(int productosVendidos) {
+        productosActuales = productosActuales - productosVendidos;
+        this.productosVendidos = this.productosVendidos + productosVendidos;
     }
 }
