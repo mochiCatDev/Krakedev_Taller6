@@ -19,5 +19,11 @@ public class TestItem {
         item3.imprimir();
         item3.vender(12);
         item3.imprimir();
+
+        // Validaciones
+        item1.devolver(20);
+        item2.vender(93);
+        item3.devolver(0);
+        item3.vender(0);
     }
 }

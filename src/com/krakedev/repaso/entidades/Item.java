@@ -42,11 +42,29 @@ public class Item {
     }
 
     public void vender(int productosVendidos) {
+        if (productosVendidos <= 0) {
+            System.out.println("Error: La cantidad a vender debe ser mayor a cero.");
+            return;
+        }
+        if (productosVendidos > productosActuales) {
+            System.out.println("Error: Stock insuficiente. Stock actual: " + productosActuales);
+            return;
+        }
+
         productosActuales -= productosVendidos;
         this.productosVendidos += productosVendidos;
-    }
+}
 
     public void devolver(int productosDevueltos) {
+        if (productosDevueltos <= 0) {
+            System.out.println("Error: La cantidad a devolver debe ser mayor a cero.");
+            return;
+        }
+        if (productosDevueltos > productosVendidos) {
+            System.out.println("Error: No se pueden devolver más productos de los que se han vendido. Vendidos: " + productosVendidos);
+            return;
+        }
+        
         productosActuales += productosDevueltos;
         productosVendidos -= productosDevueltos;
         this.productosDevueltos += productosDevueltos;
