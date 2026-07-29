@@ -42,7 +42,13 @@ public class Item {
     }
 
     public void vender(int productosVendidos) {
-        productosActuales = productosActuales - productosVendidos;
-        this.productosVendidos = this.productosVendidos + productosVendidos;
+        productosActuales -= productosVendidos;
+        this.productosVendidos += productosVendidos;
+    }
+
+    public void devolver(int productosDevueltos) {
+        productosActuales += productosDevueltos;
+        productosVendidos -= productosDevueltos;
+        this.productosDevueltos += productosDevueltos;
     }
 }

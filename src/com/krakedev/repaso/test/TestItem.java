@@ -8,9 +8,11 @@ public class TestItem {
         Item item3 = new Item("Cuadernos", 42);
 
         item1.vender(8);
+        item1.devolver(5);
         item1.imprimir();
 
         item2.vender(22);
+        item2.devolver(12);
         item2.imprimir();
 
         item3.vender(28);
